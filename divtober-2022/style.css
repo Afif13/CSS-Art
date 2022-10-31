@@ -200,6 +200,7 @@ section:hover *:after {
     width:275px;
     aspect-ratio: 1.59;
     margin: 80px 0;
+    color:#000;
     background:
       linear-gradient(90deg, #0000 33%, #fff9, #0000 67%) var(--_p,100%)/300% no-repeat,
       repeating-linear-gradient(135deg,#547980 0 10px,#594F4F 0 20px) 0% 101%/100% 10% no-repeat,
