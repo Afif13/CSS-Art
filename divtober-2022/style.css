@@ -219,7 +219,7 @@ section:after {
   font-size: 20px;
   font-weight: bold;
   text-transform: capitalize;
-  right: 10px;
+  left: 10px;
   top: 10px;
   background-color: #fff;
   padding: 5px 15px;
