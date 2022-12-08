@@ -149,21 +149,7 @@ h2 + p {
     text-align: center;
     padding-bottom: 30px;
 }
-[data-ea-publisher] {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 999;
-}
-[data-ea-publisher].loaded .ea-content, 
-[data-ea-type].loaded .ea-content {
-  background: rgb(255 255 255 / 50%)!important;
-}
-@media (max-width: 750px) {
-  [data-ea-publisher] {
-    display: none!important;
-  }
-}
+
 
 section:has(>input):before {
     content: "Click!";
