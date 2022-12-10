@@ -152,6 +152,23 @@ a.tweet {
   }
 }
 
+section.more {
+  display: flex;
+  padding-bottom: 50px;
+}
+section.more h3 {
+  width: 100%;
+  text-align:center;
+}
+section.more a {
+    padding: 20px;
+    font-weight: 900;
+    font-size: 1.2em;
+    text-align: center;
+    min-width: 200px;
+    width: 25%;
+  flex-grow:1;
+}
 /* kamado tanjiro */
 .kamado {
   --s:#f8d7b6;
