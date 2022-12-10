@@ -154,6 +154,7 @@ a.tweet {
 
 section.more {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 50px;
 }
 section.more h3 {
