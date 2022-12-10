@@ -1,1 +1,1 @@
-<a href="https://css-only.art/" target="_blank"><img src="https://github.com/Afif13/CSS-Art/blob/3cc9ed961ee3df221545edcb1c2f57851439569f/css-art.png" alt="CSS Art by Temani Afif" ></a>
+<a href="https://css-only.art/" target="_blank"><img src="https://github.com/Afif13/CSS-Art/blob/7caadae78a690979c976676e71a5f3c270ecf759/css-art.png" alt="CSS Art by Temani Afif" ></a>
