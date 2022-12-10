@@ -155,10 +155,11 @@ a.tweet {
 section.more {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px;
+  margin:auto 80px 50px;
 }
 section.more h3 {
   width: 100%;
+  font-size: 2em;
   text-align:center;
 }
 section.more a {
