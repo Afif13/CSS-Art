@@ -100,32 +100,47 @@ body footer {
 	text-align: center;
 	margin-bottom: 5px;
 }
-
 a.tweet {
-    vertical-align: middle;
-    padding: 4px 12px;
-    background-color: #1d9bf0;
-    color: #fff;
-    border-radius: 9999px;
-    display: inline-flex;
-    margin-left: 15px;
-    text-decoration: none;
-    gap: 5px;
-    align-items: center;
-    font-size: 1.1em;
+  background-color: #08769b;
+  border-radius: 9999px;
+  display: grid;
+  place-content: center;
+  width: 52px;
+  height: 52px;
+  position: fixed;
+  left: 15px;
+  bottom: 80px;
+  box-shadow: rgb(0 0 0 / 40%) 0px 4px 8px;
 }
 .credit {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    transform-origin: right top;
-    transform: translate(-30%) rotate(-45deg);
-    background: #08769b;
-    color: #fff;
-    box-shadow: 0 0 0 50px #08769b;
-    clip-path: inset(0 -100%);
-    text-decoration:none ;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  transform-origin: right top;
+  transform: translate(-30%) rotate(-45deg);
+  background: #08769b;
+  color: #fff;
+  box-shadow: 0 0 0 50px #08769b;
+  clip-path: inset(0 -100%);
+  text-decoration:none ;
+}
+#bmc-wbtn {
+  position: fixed; 
+  left: 15px; 
+  bottom: 15px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 52px; 
+  height: 52px; 
+  background: rgb(8, 118, 155);
+  border-radius: 32px; 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px;
+}
+#bmc-wbtn img {
+  height: 40px; 
+  width: 40px;
 }
 h2 {
     text-align: center;
