@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&display=swap');
+
+html {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #415462;
+  background: #b7d0d5;
+  font-family: system-ui,-apple-system,"Segoe UI","Roboto","Ubuntu","Cantarell","Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+body  {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: dense;
+}
+body section {
+  overflow: hidden;
+  transform: translate(0);
+  display: grid;
+  min-height: 500px;
+}
+body section:target {
+  min-height:100vh;
+  grid-column: 1/-1;
+}
+body section:target:after {
+  content: none;
+}
+html:has(section:target) section:not(:target) {
+  display:none
+}
+.full {
+  grid-column: 1/-1;
+}
+
+@media (max-width: 1150px) {
+  .half {
+    grid-column: 1/-1;
+  }
+}
+.center {
+  place-content: center;
+}
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 56px;
+  text-transform: none;
+  letter-spacing: -2px;
+  color: #505050;
+  white-space: nowrap;
+}
+h1 span {
+  font-size: 70px;
+  vertical-align: middle;
+}
+h1 span:first-child {
+  letter-spacing: -14px;
+}
+h1 span:nth-child(2) {
+  position: relative;
+  letter-spacing: -15px;
+  z-index: 1;
+}
+h1 span:nth-child(3) {
+  color: #c39f76;
+  filter: blur(2px);
+}
+h1 span:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  height: 28px;
+  border-left: 1.5px solid #b7d0d5;
+  border-top: 1.5px solid #b7d0d5;
+  width: 44px;
+  left: 2px;
+  border-top-left-radius: 41px 24px;
+}
+h1 span:nth-child(2):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 4.5px;
+  height: 37px;
+  border-left: 1.5px solid #b7d0d5;
+  z-index: 5;
+}
+body header {
+  text-align: center;
+  position: absolute;
+  z-index: 9;
+  inset: 0 0 auto;
+}
+body header > * {
+  margin: 5px;
+}
+body header h1 + p {
+  text-indent: 120px;
+  margin-top: -22px;
+  font-size: 15px;
+}
+body footer {
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 5px;
+}
+a.tweet {
+  background-color: #08769b;
+  border-radius: 9999px;
+  display: grid;
+  place-content: center;
+  width: 52px;
+  height: 52px;
+  position: fixed;
+  left: 15px;
+  bottom: 124px;
+  box-shadow: rgb(0 0 0 / 40%) 0px 4px 8px;
+}
+.credit {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  transform-origin: right top;
+  transform: translate(-30%) rotate(-45deg);
+  background: #08769b;
+  color: #fff;
+  box-shadow: 0 0 0 50px #08769b;
+  clip-path: inset(0 -100%);
+  text-decoration:none ;
+}
+#bmc-wbtn {
+  position: fixed; 
+  left: 15px; 
+  bottom: 60px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 52px; 
+  height: 52px; 
+  background: rgb(8, 118, 155);
+  border-radius: 32px; 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px;
+}
+#bmc-wbtn img {
+  height: 40px; 
+  width: 40px;
+}
+h2 {
+  text-align: center;
+  margin: 0;
+  color: #555;
+  padding-top: 90px;
+}
+h2 + p {
+  color: #3a3a3a;
+  text-align: center;
+}
+
+section:has(>input):before {
+  content: "Click!";
+  position: absolute;
+  left: 50%;
+  color: #000;
+  font-family: monospace;
+  font-size: 28px;
+  font-weight: bold;
+  top: 10px;
+  transform: translate(-50%);
+}
+
+section:has(.badge,.meaty,.splash,.erase,.mythical,.beloved):before {
+  content: "Hover!";
+  position: absolute;
+  left: 50%;
+  color: #000;
+  font-family: monospace;
+  font-size: 28px;
+  font-weight: bold;
+  top: 10px;
+  transform: translate(-50%);
+}
+section:has(.ten):before {
+  content: "Resize!";
+  position: absolute;
+  left: 50%;
+  color: #fff;
+  font-family: monospace;
+  font-size: 28px;
+  font-weight: bold;
+  top: 10px;
+  transform: translate(-50%);
+}
+section:hover,
+section:hover *,
+section:hover *:before,
+section:hover *:after {
+  animation-play-state: running!important;
+}
+
+body {
+  counter-reset: num;
+}
+section {
+  counter-increment: num;
+}
+section:after {
+  content:"#"counter(num) " " attr(id);
+  position: absolute;
+  z-index: 10;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  left: 10px;
+  top: 10px;
+  background-color: #fff;
+  padding: 5px 15px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 10px #0005;
+}
+
+#fall > div {
+  --c: #4f0905;
+  width: 350px;
+  aspect-ratio: 1;
+  background: 
+    conic-gradient(from -106deg at 100% 40%,var(--c) 1.5%,#0000 1.8%)48% 21%/29% 16%,
+    conic-gradient(from -30deg at 100% 100%,var(--c) 1.5%,#0000 1.7%)47% 89%/16% 16%,
+    conic-gradient(from 270deg at 100% 100%,var(--c) 1.5%,#0000 1.7%)81% 42%/26% 21%,
+    conic-gradient(from 246deg at 100% 0,var(--c) 2%,#0000 2.4%)46% 81%/21% 21%,
+    conic-gradient(from 222deg at 100% 0,var(--c) 2%,#0000 2.4%)56% 30%/40% 16%,
+    radial-gradient(125% 75% at 0% 0%,#0000 65%,var(--c) 66% 99%,#0000 )0% 82%/20% 25%, 
+    radial-gradient(72% 61% at 79% 100%,#0000 90%,#fddd97 75% 98%,#0000 )100% 39%/82% 50%,
+    radial-gradient(71% 61% at 80% 100%,#0000 90%,var(--c) 91% 99%,#0000 ) 50% 38%/88% 50%, 
+    radial-gradient(75% 116% at 88% 100%,#0000 88%,var(--c) 89% 99%,#0000 ) 20% 43%/43% 32%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: auto auto auto 0;
+}
+#fall > div:before {
+  content: "";
+  position: absolute;
+  width: 59%;
+  height: 25%;
+  border-top: 13px solid var(--c);
+  border-radius: 50%;
+  bottom: 2%;
+  left: 3%;
+  transform: rotate(7deg);
+  filter: drop-shadow(51px -76px var(--c));
+}
+#fall > div:after {
+  content: "";
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 1.5;
+  background: 
+    linear-gradient(#4f0905 0 0)0 50%/67% 1px,
+    radial-gradient(50% 100% at 50% 125%,#aa4600 98%,#0000) 100% 0/83% 51%,
+    radial-gradient(50% 100% at 50% -25%,#aa4600 98%,#0000) 100% 100%/83% 51%;
+  background-repeat: no-repeat;
+  top: 36%;
+  left: 94%;
+  transform-origin: 0 50%;
+  transform: rotate(57deg);
+}
+
+#impossible > div {
+  width: 500px;
+  aspect-ratio: 1.5;
+  background: conic-gradient(from 45deg at 50% 125%, #20b2aa, #135da5, #0d0895, #4b0082, #4b0082, #0d0895, #135da5, #20b2aa);
+  -webkit-mask: 
+    linear-gradient(7deg,#0000 24%,#000 26% 83%,#0000 87%) 92% 90%/4% 8%,
+    radial-gradient(97% 99% at 0 100%,#0000 33%,#000 34% 98%,#0000) 97.5% 91%/6% 8%,
+    radial-gradient(96% 100% at 100% 0,#0000 33%,#000 34% 98%,#0000) 88.5% 88%/6% 8%,
+    radial-gradient(50% 100% at top,#0000 43%,#000 44% 98%,#0000) 97% 99%/14% 8%,
+    radial-gradient(50% 100% at bottom,#0000 43%,#000 44% 98%,#0000) 97% 80%/14% 8%,
+    conic-gradient(from 150deg at top,#000 89.5deg,#0000 90.2deg) 17% 53%/28% 13%,
+    conic-gradient(from 150deg at top,#000 89.5deg,#0000 90.2deg) 40% 27.5%/28% 12.8%,
+    conic-gradient(from 150deg at top,#000 89.5deg,#0000 90.2deg) 63% 1.8%/28% 13%,
+    linear-gradient(60deg,#0000 31.5%,#000 32% 64%,#0000 64.5%) -10.5% 63%/57% 7%,
+    linear-gradient(60deg,#0000 32.5%,#000 33% 64.5%,#0000 65%) 39% 51.5%/49% 29%,
+    linear-gradient(60deg,#0000 32.5%,#000 33% 65%,#0000 65.5%) 75% 29%/40% 52%,
+    linear-gradient(#000 0 0)41.5% 70%/4% 6%,
+    linear-gradient(#000 0 0)61.5% 98%/4% 33%,
+    linear-gradient(#000 0 0)35.5% 98%/4% 33%,
+    linear-gradient(#000 0 0)80.8% 98%/4% 25%,
+    linear-gradient(#000 0 0)41.5% 98%/4% 25%,
+    linear-gradient(#000 0 0)15.6% 98%/4% 25%,
+    radial-gradient(50% 50%,#0000 55%,#000 56% 98%,#0000) 2% 99%/17% 26%,
+    radial-gradient(50% 50%,#0000 55%,#000 56% 98%,#0000) 24.5% 99%/17% 26%,
+    radial-gradient(50% 50%,#0000 55%,#000 56% 98%,#0000) 55% 99%/17% 26%,
+    radial-gradient(50% 50%,#0000 55%,#000 56% 98%,#0000) 77.4% 99%/17% 26%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+#artist > div {
+  --s: 20px; /* control the size of the frame */
+  
+  width: 250px;
+  aspect-ratio: 0.8;
+  padding: var(--s);
+  --_g: #aa6342 90deg,#0000 0;
+  --_d: var(--s) calc(2*var(--s)) no-repeat space;
+  background:
+    conic-gradient(from 45deg  at 0%  ,var(--_g)) 100%/var(--_d),
+    conic-gradient(from 225deg at 100%,var(--_g)) 0   /var(--_d),
+    linear-gradient(#c69781 var(--s),#aa6342 0 calc(100% - var(--s)),#944b29 0);
+  box-shadow: 2px 2px 4px #0009;
+  outline: 2px solid #f2f2f2;
+  outline-offset: calc(-1*var(--s));
+  position: relative;
+}
+
+#artist> div:before {
+  content: "";
+  position: absolute;
+  inset: calc(-2*var(--s));
+  padding: calc(2*var(--s));
+  background: 
+    repeating-radial-gradient(at 19% 80%,#00f 0 9%,#0ff 0 20%),
+    repeating-conic-gradient(at 68% 90%,#f0f 0 19deg, #ff0 0 32deg,#ff0 0 40deg), 
+    #fff;
+  background-blend-mode: difference;
+  filter: blur(13px) contrast(116) sepia(1);
+  clip-path: inset(calc(3*var(--s)));
+}
+#artist > div:after {
+  content: "The Ugly Spirit";
+  position: absolute;
+  inset: 105% 0 auto;
+  margin: auto;
+  width: fit-content;
+  background: #f5f3f3;
+  padding: 5px;
+  font-family: system-ui;
+  box-shadow: 2px 2px 4px #0004;
+  font-size: 15px;
+}
