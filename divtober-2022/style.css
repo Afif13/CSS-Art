@@ -30,6 +30,16 @@ body section {
     display: grid;
     min-height: 500px;
 }
+body section:target {
+  min-height:100vh;
+  grid-column: 1/-1;
+}
+body section:target:after {
+  content: none;
+}
+html:has(section:target) section:not(:target) {
+  display:none
+}
 .full {
     grid-column: 1/-1;
 }
