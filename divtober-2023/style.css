@@ -342,3 +342,41 @@ section:after {
   box-shadow: 2px 2px 4px #0004;
   font-size: 15px;
 }
+
+#crawl > div {
+  --c: #885633;
+  width: 400px;
+  aspect-ratio: 2;
+  background:
+    radial-gradient(var(--c) 70%,#0000 72%) 74% 15%/15% 30% no-repeat,
+    radial-gradient(41.38px at 50% 58.50px,#76D3DE 99%,#0000 101%) calc(27% - 60px) 60px/120px 100%,
+    radial-gradient(41.38px at 50% -28.5px,#0000 99%,#76D3DE 101%) 27% 90px/120px 100% repeat-x;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+#crawl > div:before {
+  content:"";
+  position: absolute;
+  left: 31%;
+  bottom: 28%;
+  transform: rotate(52deg);
+  width: 30%;
+  aspect-ratio: 1;
+  border-top-left-radius: 40px;
+  background:
+    radial-gradient(at 100% 100%,#0000 70%,var(--c) 72%) 34% 34%/15% 15%,
+    linear-gradient(var(--c) 0 0) 100% 0/50% 100%,
+    linear-gradient(var(--c) 0 0) 0 0/100% 30%,
+    radial-gradient(var(--c) 70%,#0000 73%) 0 75%/30% 30%,
+    linear-gradient(var(--c) 0 0) 0 0/30% 70%;
+  background-repeat:no-repeat;
+}
+#crawl > div:after {
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(48.28px at 50% 68.25px,#00BCD1 99%,#0000 101%) calc(50% - 70px) 70px/140px 100%,
+    radial-gradient(48.28px at 50% -33.25px,#0000 99%,#00BCD1 101%) 50% 105px/140px 100% repeat-x;
+}
