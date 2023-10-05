@@ -380,3 +380,40 @@ section:after {
     radial-gradient(48.28px at 50% 68.25px,#00BCD1 99%,#0000 101%) calc(50% - 70px) 70px/140px 100%,
     radial-gradient(48.28px at 50% -33.25px,#0000 99%,#00BCD1 101%) 50% 105px/140px 100% repeat-x;
 }
+
+#lost > div {
+  width: 250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(50% 50%,#bee8e3 60%,#afdfdf 0 80%,#90601a 81%,#ffca51 86% 94%,#90601a);
+  position: relative;
+}
+#lost > div:before {
+  content:"";
+  position: absolute;
+  inset: 23%;
+  background: 
+    radial-gradient(#ffca51 6%,#90601a 8% 10%,#0000 0),
+    linear-gradient(#f93c31 50%,#9f79b8 0);
+  clip-path: polygon(50% 0,62% 50%,50% 100%,38% 50%);
+  animation: r-lost 3s infinite;
+}
+@keyframes r-lost{
+  20% {rotate: .8turn}
+  30% {rotate: -1.5turn}
+  50% {rotate: .1turn}
+  55% {rotate: -.3turn}
+  70% {rotate: 1.8turn}
+  90% {rotate: -.3turn}
+}
+#lost > div:after {
+  content: "N\A E        W\A S";
+  position: absolute;
+  font-family: monospace;
+  inset: 0;
+  text-align: center;
+  white-space: pre;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 2.8;
+}
