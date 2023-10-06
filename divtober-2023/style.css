@@ -417,3 +417,78 @@ section:after {
   font-weight: bold;
   line-height: 2.8;
 }
+
+
+#bounce > div {
+  position: fixed;
+  width: 300px;
+  aspect-ratio: 2;
+  background: red;
+  -webkit-mask: 
+    conic-gradient(from -18deg,#000 16.2%,#0000 17%)47% 67%/14% 28%,
+    linear-gradient(71deg,#0000 36%,#000 37% 63%,#0000 64%)44% 6%/22% 46%,
+    linear-gradient(131deg,#0000 40%,#000 41% 63%,#0000 64%)60% 7%/22% 45%,
+    linear-gradient(104deg,#0000 48%,#000 49% 75%,#0000 76%)-10% 29%/29% 34%,
+    linear-gradient(104deg,#0000 48%,#000 49% 75%,#0000 76%)73% 29%/29% 34%,
+    linear-gradient(#000 0 0) 8% 47%/11% 11%,
+    linear-gradient(#000 0 0) 74% 47%/10% 11%,
+    linear-gradient(#000 0 0) 74% 3.7%/14% 11%,
+    linear-gradient(104deg,#0000 6%,#000 7%) 13% 3.7%/34% 11%,
+    radial-gradient(100% 50% at left,#0000 54%,#000 56% 98%,#0000) 22% 6%/21% 50%,
+    radial-gradient(100% 50% at left,#0000 54%,#000 56% 98%,#0000) 97% 6%/21% 50%,
+    radial-gradient(#0000 16%,#000 18% 69%,#0000 72%) 30% 85%/88% 25%;
+  -webkit-mask-repeat: no-repeat;
+  animation: 
+    dvd 20s linear infinite,
+    c-bounce 6s linear infinite;
+}
+
+@keyframes dvd {
+  0%,100% {
+    top: 0;
+    left: 20%;
+    translate: -20% 0;
+  }
+  12.5% {
+    top: 80%;
+    left: 100%;
+    translate: -100% -80%;
+  }
+  25% {
+    top: 100%;
+    left: 50%;
+    translate: -50% -100%;
+  }
+  37.5% {
+    top: 80%;
+    left: 0;
+    translate: 0 -80%;
+  }
+  50% {
+    top: 0;
+    left: 80%;
+    translate: -80% 0;
+  }
+  62.5% {
+    top: 30%;
+    left: 100%;
+    translate: -100% -30%;
+  }
+  75% {
+    top: 100%;
+    left: 50%;
+    translate: -50% -100%;
+  }
+  87.5% {
+    top: 20%;
+    left: 0%;
+    translate: 0 -20%;
+  }
+}
+
+@keyframes c-bounce {
+  0%,100%{background: #00feff}
+  25%{background: #be00ff}
+  50%{background: #ff8300}
+  75%{background: #fffa01}
+}
