@@ -492,3 +492,47 @@ section:after {
   50%{background: #ff8300}
   75%{background: #fffa01}
 }
+
+#treat > div {
+  width: 300px;
+  aspect-ratio: 1.15;
+  border-radius: 50%;
+  translate: 0 20%;
+  background:
+    radial-gradient(#222 70%,#0000 72%) 83% 10%/9% 7%,
+    radial-gradient(#222 70%,#0000 72%) 17% 10%/9% 7%,
+    conic-gradient(from 150deg at top,#000 60deg,#0000 0) 75% 25%/20% 18%,
+    conic-gradient(from 150deg at top,#000 60deg,#0000 0) 25% 25%/20% 18%,
+    conic-gradient(from 150deg at top,#000 60deg,#0000 0) 50%/15% 10%,
+    radial-gradient(30% 55%,#f48d02 98%,#ee6e01) bottom/100% 90%;
+  background-repeat:no-repeat;
+  position: relative;
+}
+#treat > div:before {
+  content:"";
+  position: absolute;
+  inset: 60% 20% 20%;
+  background: #000;
+  clip-path: polygon(0 0,20% 30%,35% 0,50% 30%,65% 0,80% 30%,100% 0,80% 100%,65% 70%,50% 100%,35% 70%,20% 100%)
+} 
+#treat > div:after {
+  content:"";
+  position: absolute;
+  inset: -40% 18% 85%;
+  border: 10px solid #222;
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  --c1:radial-gradient(50% 50% at bottom,#09a43c 20%,#9bc410 25%,#09a43c 50% 70%,#9bc410 80% 98%,#0000);
+  --c2:radial-gradient(50% 50% at bottom,#a44c9a 20%,#f7b80b 25%,#a44c9a 50% 70%,#f7b80b 80% 98%,#0000);
+  --c3:radial-gradient(50% 50% at bottom,#3f91e5 20%,#fe5e02 25%,#3f91e5 50% 70%,#fe5e02 80% 98%,#0000);
+  background: 
+    var(--c1) 93% 100%/20% 23%,
+    var(--c2) 71% 100%/25% 29%,
+    var(--c3) 26% 100%/25% 29%,
+    var(--c1) 51% 100%/20% 23%,
+    var(--c2) 11% 100%/22% 27%,
+    var(--c3) 90% 100%/29% 39%,
+    radial-gradient(50% 50%,#aa4d00 96%,#0000 ) 50% 106%/106% 23%;
+  background-repeat: no-repeat;
+  clip-path: ellipse(134% 100% at top);
+}
