@@ -574,3 +574,31 @@ section:after {
   border-radius: 8px;
   background: conic-gradient(from 90deg at 1px 1px,#f2f2f2 25%,#000 0) -1px -1px/21% 35%;
 }
+
+#space > div {
+  width: 300px;
+  aspect-ratio: .8;
+  background: 
+    radial-gradient(50% 50%,#404040 90%,#0000 )50% 87%/15% 3%,
+    radial-gradient(50% 81% at 50% 81%,#92b223 99%,#0000) top/100% 51%,
+    radial-gradient(108% 166% at 100% -70%,#92b223 99%,#0000) 0% 100%/50% 50%,
+    radial-gradient(108% 166% at 0 -70%,#92b223 99%,#0000) 100% 100%/50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#space > div:before, 
+#space > div:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 11%;
+  background: #404040;
+  width: 35%;
+  aspect-ratio: 1;
+  border-radius: 20px 100%;
+} 
+#space > div:after {
+  left: auto;
+  right: 11%;
+  border-radius: 100% 20px;
+}
