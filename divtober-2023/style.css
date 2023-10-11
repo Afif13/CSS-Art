@@ -629,3 +629,57 @@ section:after {
 @keyframes sparkle {
   to {background-position: 60.2% 59%,40.5% 39.8%}
 }
+#bones > div{
+  width: 400px;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(#000 70%,#0000 72%) 50% 57%/7% 7%,
+    radial-gradient(#000 70%,#0000 72%) 39% 48%/14% 14%,
+    radial-gradient(#000 70%,#0000 72%) 61% 48%/14% 14%,
+    linear-gradient(#000 0 0) 50% 39%/69% 2px,
+    linear-gradient(#000 0 0) 50% 35.8%/59% 2px,
+    linear-gradient(#000 0 0) 50% 31%/42% 2px,
+    radial-gradient(50% 100% at 50% 134%,#f0b114 98%,#0000 )50% 15%/44% 19%,
+    radial-gradient(50% 84% at 50% 100%,#cf091a 98%,#0000 )50% 24%/44% 16%,
+    radial-gradient(50% 23% at 50% 100%,#F0B114 98%,#0000 )50% 24%/68% 20%,
+    radial-gradient(#fff 68%,#000 69% 70%,#0000 71%) 50% 34%/47% 47%,
+    url(https://i.stack.imgur.com/Q4JJG.jpg) 50%/auto 0%;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+}
+#bones > div:before {
+  content: "";
+  position: absolute;
+  background: 
+    linear-gradient(#000 0 0) 78% 50%/3% 43%,
+    linear-gradient(#000 0 0) 22% 50%/3% 43%,
+    linear-gradient(#000 0 0) 50% 50%/3% 47%,
+    radial-gradient(75% 57% at 50% 0,#0000 93%,#000 94% 98%,#0000 ),
+    radial-gradient(85% 76% at 50% 0,#0000 94%,#000 95% 98%,#0000 )#fff;
+  background-repeat: no-repeat;
+  inset: 55% 37% 20%;
+  border-radius: 14% 14% 40px 40px/50% 50% 40px 40px;
+  border: 3px solid #000;
+  z-index: -1;
+}
+#bones > div:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  padding: 10%;
+  background: 
+    radial-gradient(#fff 66%,#0000 71%) 10% 97%/10% 11%,
+    radial-gradient(#fff 66%,#0000 71%) 3% 90%/10% 11%,
+    radial-gradient(#fff 66%,#0000 71%) 97% 91%/10% 11%,
+    radial-gradient(#fff 66%,#0000 71%) 89% 98%/10% 11%,
+    radial-gradient(#fff 66%,#0000 71%) 89% 2%/10% 11%,
+    radial-gradient(#fff 66%,#0000 71%) 98% 9%/12% 10%,
+    radial-gradient(#fff 66%,#0000 71%) 2% 10%/11% 10%,
+    radial-gradient(#fff 66%,#0000 71%) 9% 2%/10% 11%,
+    linear-gradient(45deg,#0000 47%, #fff 0 53%,#0000 0) content-box,
+    linear-gradient(-45deg,#0000 47%, #fff 0 53%,#0000 0) content-box,#000;
+  background-repeat: no-repeat;
+  filter: blur(5px) contrast(21);
+}
