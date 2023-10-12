@@ -683,3 +683,33 @@ section:after {
   background-repeat: no-repeat;
   filter: blur(5px) contrast(21);
 }
+
+#glass > div{
+  position: absolute;
+  inset: 0;
+  background: 
+    conic-gradient(from 56deg at calc(50% - 6px) calc(50% + 21px),
+      #f30 2%,#fc3 2.1% 4%,#fffe33 4.1% 6%,#67cc66 6.1% 8%,#3398cc 8.1% 10%,#2f63d0 10.1% 12%,#67329a 12.1% 14%,#0000 14.1%)
+}
+#glass > div:before {
+  content:"";
+  position: absolute;
+  width: 200px;
+  aspect-ratio: 1.154;
+  inset: 0;
+  margin: auto;
+  background: 
+    linear-gradient(#caf1ffc4 0 0),
+    conic-gradient(from 75deg at 14% 60%,
+      #f30 1%,#fc3 1.2% 2%,#fffe33 2.2% 3%,#67cc66 3.2% 4%,#3398cc 4.2% 5%,#2f63d0 5.2% 6%,#67329a 6.2% 7%,#0000 7.2%);
+  clip-path: polygon(50% 0,100% 100%,0 100%)
+}
+#glass > div:after {
+  content: "";
+  position: absolute;
+  inset: 0 50% 0 -100vmax;
+  transform: rotate(30deg);
+  transform-origin: 100% 37%;
+  background: linear-gradient(#fffeff 0 0) 50% 55%/100% 5px no-repeat;
+  z-index: -1;
+}
