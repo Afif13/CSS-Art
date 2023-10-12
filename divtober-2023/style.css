@@ -709,7 +709,7 @@ section:after {
   position: absolute;
   inset: 0 50% 0 -100vmax;
   transform: rotate(30deg);
-  transform-origin: 100% 37%;
-  background: linear-gradient(#fffeff 0 0) 50% 55%/100% 5px no-repeat;
+  transform-origin: 100% calc(50% - 86px);
+  background: linear-gradient(#fffeff 0 0) 50% calc(50% + 32px)/100% 5px no-repeat;
   z-index: -1;
 }
