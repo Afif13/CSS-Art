@@ -713,3 +713,39 @@ section:after {
   background: linear-gradient(#fffeff 0 0) 50% calc(50% + 32px)/100% 5px no-repeat;
   z-index: -1;
 }
+
+#collect > div{
+  width: 100px;
+  aspect-ratio: 2;
+  border-radius: 0 50px 50px 0;
+  box-shadow: -100px 0 0 20px #2f4459;
+  background: #2f4459;
+  margin: auto auto auto 0;
+  position: relative;
+}
+#collect > div:before {
+  content:"";
+  position: absolute;
+  inset: 0 -120px 0 calc(100% - 50px);
+  border-radius: 50px;
+  background: radial-gradient(#2f4459 15%,#fff 16% 34%,#2f4459 35% 70%,#0000 72%) 0 0   /50px 50px no-repeat #748da3;
+  transform-origin: 25px 50%;
+  rotate: -30deg;
+}
+#collect > div:after {
+  content:"";
+  position: absolute;
+  left: 154px;
+  top: -59px;
+  aspect-ratio: .4;
+  width: 50px;
+  border-radius: 50px 50px 0 0;
+  background: 
+    radial-gradient(#2f4459 15%,#fff 16% 34%,#2f4459 35% 70%,#0000 72%) 100% 0/50px 50px,
+    linear-gradient(0deg,#e08a16 56%,#577182 0) bottom/40% 70%,
+    linear-gradient(#e08a16 0 0) bottom/100% 40%;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0,100% 0,100% 50%,70% 50%,100% 75%,75% 100%,80% 75%,70% 70%,30% 70%,20% 75%,25% 100%,0 75%,30% 50%,0 50%);
+  transform-origin: 50% 25px;
+  rotate: -40deg
+}
