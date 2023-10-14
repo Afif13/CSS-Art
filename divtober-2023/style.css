@@ -749,3 +749,35 @@ section:after {
   transform-origin: 50% 25px;
   rotate: -40deg
 }
+
+#small > div{
+  height: 50px;
+  width: 120px;
+  display: grid;
+  position: relative;
+  animation: t 4s forwards linear;
+}
+#small > div:before {
+  content:"";
+  background:
+    linear-gradient(90deg,#e7e7e7 30%,#fe668c 0)
+     100%/50px 100% no-repeat,
+    conic-gradient(from 55deg at left,#fee7b3,#0000 1deg 69deg,#fee7b3 70deg) 
+     100% 8px/calc(100% - 40px) 16px repeat-y,
+    linear-gradient(#0003 50%,#0000 0) 100% 8px/calc(100% - 41px) 32px repeat-y,
+    linear-gradient(90deg,#2b2026 15px,#fee7b3 16px 40px,#fecc2b 0);
+  clip-path: polygon(0 50%,42px 0,100% 0,100% 100%,42px 100%);
+  border-radius: 0 10px 10px 0;
+  transform-origin: 0 50%;
+  rotate: -35deg;
+}
+#small > div:after {
+  content:"";
+  position: absolute;
+  inset: calc(50% - 3px) 100% 50% -100vw;
+  background: 
+    repeating-radial-gradient(#0000 0 0.00015%,#000 0 0.0002%) 
+    60% 60%/3000px 3000px,
+    repeating-conic-gradient(#0000 0 0.00015%,#000 0 0.0002%) 
+    40% 40%/3000px 3000px; 
+}
