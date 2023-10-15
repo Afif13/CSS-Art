@@ -781,3 +781,37 @@ section:after {
     repeating-conic-gradient(#0000 0 0.00015%,#000 0 0.0002%) 
     40% 40%/3000px 3000px; 
 }
+
+#remember > div{
+  width: 300px;
+  aspect-ratio: .96;
+  border-radius: 10px;
+  background:
+    radial-gradient(100% 100% at 100% 0,#0000 94%,#fb2a90)38px 93px/10px 10px,
+    linear-gradient(#e5147a 0 0) 20% 0%/36% 33%,
+    conic-gradient(from 135deg at top,#b01479 90deg,#0000 0) 2px 5%/10% 4%,
+    linear-gradient(#b01479 0 0) 12px 8%/9px 5%,
+    linear-gradient(#53777A 0 0) 97% 92%/5% 5%,
+    linear-gradient(#b01479 0 0 ) 3% 92%/5% 5%
+    #fb2a90;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0,13% 0,13% 4px,28% 4px,28% 0,calc(100% - 17px) 0,100% 17px,100% 100%,0 100%);
+  position: relative;
+}
+#remember > div:before {
+  content: "";
+  position: absolute;
+  inset: 41% 12% 6%;
+  background: 
+    linear-gradient(#6542de 0 0) bottom/100% 17% no-repeat,
+    linear-gradient(#6542de 1px,#0000 0)0 -2px/100% calc(100%/7)
+    #ffedf8;
+  border-radius: 10px;
+}
+#remember > div:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(#e5147a 0 0) 77% 69%/24% 78% no-repeat #ded9dd;
+  inset: 0 18% 67% 28%;
+  border-radius: 0 0 10px 10px;
+}
