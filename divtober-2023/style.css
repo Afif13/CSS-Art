@@ -815,3 +815,33 @@ section:after {
   inset: 0 18% 67% 28%;
   border-radius: 0 0 10px 10px;
 }
+
+#tangled > div{
+  width: 350px;
+  aspect-ratio: 1;
+  background: #fff;
+  filter: blur(2px) contrast(5);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid;
+}
+#tangled > div:before {
+  content:"";
+  position: absolute;
+  width: 30%;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(50% 50%,#0000 85%,#000 0 98%,#0000)
+     80% 20%/40% 80% no-repeat,
+    radial-gradient(50% 50%,#0000 90%,#000 0 98%,#0000)
+     20% 20%/60% 60% no-repeat;
+  filter: 
+    drop-shadow(100px 20px #000) 
+    drop-shadow(150px 60px #000)
+    drop-shadow(-80px 90px #000)
+    drop-shadow(100px -10px #000)
+    drop-shadow(-20px 80px #000)
+    drop-shadow(-20px 200px #000)
+    drop-shadow(-20px -200px #000)
+    drop-shadow(300px 200px #000);
+}
