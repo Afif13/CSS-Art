@@ -466,9 +466,7 @@ section:after {
 .microsoft {
   width: 200px;
   aspect-ratio: 1;
-  background: conic-gradient(#7cbb00 25%,#ffbb00 0 50%,#00a1f1 0 75%,#f65314 0);
-  -webkit-mask: linear-gradient(#000 0 0) 0 0/48% 48% space;
-  mask: linear-gradient(#000 0 0) 0 0/48% 48% space;
+  border-image: conic-gradient(#7cbb00 25%,#ffbb00 0 50%,#00a1f1 0 75%,#f65314 0) 50%/48%;
 }
 
 .digitalocean {
